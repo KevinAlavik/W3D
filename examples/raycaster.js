@@ -22,7 +22,7 @@ class Ray {
   }
 
   show() {
-    w3d.line(this.pos.x, this.pos.y, this.pos.x + this.dir.x * 10, this.pos.y + this.dir.y * 10, "white");
+//w3d.line(this.pos.x, this.pos.y, this.pos.x + this.dir.x * 10, this.pos.y + this.dir.y * 10, "white");
   }
 
   cast(wall) {
@@ -73,7 +73,7 @@ class Particle {
   }
 
   show() {
-    w3d.circle(9, 9, this.x, this.y, "white");
+    //w3d.circle(9, 9, this.x, this.y, "white");
     for (let ray of this.rays) {
       ray.show();
     }
@@ -97,7 +97,7 @@ class Particle {
       }
 
       if (closest) {
-        w3d.line(this.x, this.y, closest.x, closest.y, "white");
+        w3d.line(this.x, this.y, closest.x, closest.y, "white", 0.5);
       }
     }
   }
